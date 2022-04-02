@@ -31,14 +31,18 @@ request.onload = function () {
       const card = document.createElement("div");
       card.setAttribute("class", "card");
       // create h1 set the content to film's title
-      const h1 = document.createElement("h1");movie
+      const h1 = document.createElement("h1");
       h1.textContent = movie.title
-
+        //create p to set the description inside
+        const p = document.createElement('p');
+       movie.description = movie.description.substring(0, 300)//limit to 300 chars
+       p.textContent = `${movie.description}...`//End with ellipses
       //append the cards to container
       container.appendChild(card)
 
       //place h1 and p into cards
       card.appendChild(h1)
+      card.appendChild(p)
         //Log each movie's title
         console.log(movie.title);
       console.log(movie.description);
