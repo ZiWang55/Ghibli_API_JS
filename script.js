@@ -48,6 +48,9 @@ request.onload = function () {
       console.log(movie.description);
     });
   } else {
+      const errorMessage = document.createElement('div')
+      errorMessage.textContent = `its not working`
+      app.appendChild(errorMessage)
     console.log("error");
   }
 };
